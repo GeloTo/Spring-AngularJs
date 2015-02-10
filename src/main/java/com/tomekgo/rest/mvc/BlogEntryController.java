@@ -20,7 +20,8 @@ public class BlogEntryController {
     public BlogEntryController(BlogEntryService service) {
         this.service = service;
     }
-
+//test comita
+    int a = 4;
     @RequestMapping(value = "/{blogEntryId}",
             method = RequestMethod.GET)
     public ResponseEntity<BlogEntryResource> getBlogEntry(
