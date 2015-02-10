@@ -1,0 +1,18 @@
+package com.tomekgo.core.services;
+
+import com.tomekgo.core.entities.BlogEntry;
+
+/**
+ * Created by Tomek on 2015-01-29.
+ */
+public interface BlogEntryService {
+    public BlogEntry find(Long id); // Returns the BlogEntry or null if it can't be found
+    public BlogEntry delete(Long id); // Deletes the found BlogEntry or returns null if it can't be found
+
+    /**
+     * @param id the id of the BlogEntry to update
+     * @param data the BlogEntry containing the data to be used for the update
+     * @return the updated BlogEntry or null if the BlogEntry with the id cannot be found
+     */
+    public BlogEntry update(Long id, BlogEntry data);
+}
